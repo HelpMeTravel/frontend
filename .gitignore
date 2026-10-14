@@ -1,0 +1,9 @@
+# налаштування IDEA
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# файли докера
+.docker/
+*.log
