@@ -1,6 +1,10 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# User-specific settings
+/tasks.xml
+/usage.statistics.xml
+/dictionaries/
 # Markdown personal settings
 /markdown.xml
 # Editor-based HTTP Client requests
