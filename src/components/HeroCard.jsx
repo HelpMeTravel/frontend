@@ -4,11 +4,11 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import mapImage from '../assets/map.png';
 
-const HomeCard = () => (
+export const HeroCard = () => (
   <Card
     sx={{
       width: '100%',
-      maxWidth: { xs: '100%', md: 1000 },
+      maxWidth: { xs: 400, sm: 440, md: 1000 },
       backgroundColor: '#DCEBE2',
       borderRadius: { xs: '20px', md: '32px' },
       boxShadow: 'none',
@@ -132,5 +132,3 @@ const HomeCard = () => (
     </CardContent>
   </Card>
 );
-
-export default HomeCard;
