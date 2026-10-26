@@ -8,7 +8,7 @@ const HomeCard = () => (
   <Card
     sx={{
       width: '100%',
-      maxWidth: { xs: '100%', md: 1000 }, // на ноутах займає природну ширину контентної зони
+      maxWidth: { xs: '100%', md: 1000 },
       backgroundColor: '#DCEBE2',
       borderRadius: { xs: '20px', md: '32px' },
       boxShadow: 'none',
@@ -21,12 +21,11 @@ const HomeCard = () => (
         p: { xs: 1.5, sm: 2, md: 3 },
         '&:last-child': { pb: { xs: 1.5, sm: 2, md: 3 } },
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' }, // мобілка — колонка, ноутбук — два блоки поруч
+        flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
         gap: { xs: 3, md: 6 },
       }}
     >
-      {/* Ліва колонка: Текст і пошук */}
       <Box
         sx={{
           flex: 1,
@@ -58,7 +57,6 @@ const HomeCard = () => (
           Your guide to public transport and cultural etiquette in European cities.
         </Typography>
 
-        {/* Пошук */}
         <Box
           sx={{
             display: 'flex',
@@ -109,7 +107,6 @@ const HomeCard = () => (
         </Typography>
       </Box>
 
-      {/* Права колонка: Зображення карти */}
       <Box
         sx={{
           flex: 1,
