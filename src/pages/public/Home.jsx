@@ -1,19 +1,10 @@
-import { HeroCard } from '../../components/HeroCard';
+import { Stack } from '@mui/material';
 import { FeedbackCard } from '../../components/FeedbackCard';
+import { HeroCard } from '../../components/HeroCard';
 
 export const Home = () => (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      padding: '2rem',
-      gap: '32px',
-      color: '#fffff',
-    }}
-  >
+  <Stack spacing={4}>
     <HeroCard />
     <FeedbackCard />
-  </div>
+  </Stack>
 );

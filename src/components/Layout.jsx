@@ -1,13 +1,14 @@
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer';
-import Header from './Header';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { CenteredContent } from './shared/ui/CenteredContent';
 
 export const Layout = () => (
   <>
     <Header />
-    <main>
+    <CenteredContent component="main">
       <Outlet />
-    </main>
+    </CenteredContent>
     <Footer />
   </>
 );
