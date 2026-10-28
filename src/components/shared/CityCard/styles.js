@@ -1,50 +1,61 @@
 
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Stack, styled } from '@mui/material';
 
-export const CityCardStyled = styled(Box)(({ theme }) => ({
-  width: '100%',
-  overflow: 'hidden',
-  boxSizing: 'border-box',
-  backgroundColor: theme.palette.background.paper,
-  border: `1px solid ${theme.palette.divider}`,
-  borderRadius: theme.shape.cardBorderRadius.mobile,
+import {
+  CardStyled,
+  CardImage,
+  CardContentStyled,
+  CardTitle,
+  CardDescription,
+} from '../ui/Card';
 
-  [theme.breakpoints.up('md')]: {
-    borderRadius: theme.shape.cardBorderRadius.desktop,
-  },
-}));
+export const CityCardStyled = styled(CardStyled)({
+  maxWidth: 'none',
+  padding: 0,
+});
 
-export const CityImage = styled('img')(({ theme }) => ({
-  display: 'block',
-  width: '100%',
-  height: 160,
+export const CityImage = styled(CardImage)(({ theme }) => ({
+  height: 180,
   objectFit: 'cover',
   borderRadius: theme.shape.borderRadius,
 }));
 
-export const CityCardContent = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(1, 1, 2),
+export const CityCardContent = styled(CardContentStyled)(({ theme }) => ({
+  flexDirection: 'column',
+  alignItems: 'stretch',
+  gap: theme.spacing(1),
+  padding: `${theme.spacing(1)} !important`,
+
+  [theme.breakpoints.up('md')]: {
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: theme.spacing(1),
+    padding: `${theme.spacing(1)} !important`,
+  },
 }));
 
-export const CityCardFooter = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: 8,
+export const CityCardInfo = styled(Stack)(({ theme }) => ({
+  width: '100%',
+  padding: theme.spacing(1),
+}));
+
+export const CityCardText = styled(Box)({
+  minWidth: 0,
 });
 
-export const CityName = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.primary,
+export const CityName = styled(CardTitle)(({ theme }) => ({
+  marginBottom: theme.spacing(0.5),
   fontWeight: 600,
 }));
 
-export const CountryName = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.secondary,
-}));
+export const CountryName = styled(CardDescription)({});
+
+export const CityCardFooter = styled(Stack)({
+  width: '100%',
+});
 
 export const CityArrow = styled('span')(({ theme }) => ({
   color: theme.palette.text.primary,
   fontSize: 22,
   lineHeight: 1,
-  flexShrink: 0,
 }));
