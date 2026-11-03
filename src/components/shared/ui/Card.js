@@ -1,8 +1,7 @@
 import { Box, CardContent, Card as MuiCard, Typography, styled } from '@mui/material';
 
 export const CardStyled = styled(MuiCard, {
-  shouldForwardProp: (prop) =>
-    !['cardVariant', 'cardPadding'].includes(prop),
+  shouldForwardProp: prop => !['cardVariant', 'cardPadding'].includes(prop),
 })(({ theme, cardVariant, cardPadding }) => ({
   width: '100%',
   maxWidth: theme.spacing(50),
@@ -33,7 +32,7 @@ export const CardStyled = styled(MuiCard, {
 }));
 
 export const CardImage = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'cardVariant',
+  shouldForwardProp: prop => prop !== 'cardVariant',
 })(({ theme, cardVariant }) => {
   const borderRadius =
     cardVariant === 'hero' ? theme.shape.heroCardBorderRadius : theme.shape.cardBorderRadius;
@@ -51,7 +50,7 @@ export const CardImage = styled(Box, {
 });
 
 export const CardContentStyled = styled(CardContent, {
-  shouldForwardProp: (prop) => !['contentAlignItems', 'contentGap'].includes(prop),
+  shouldForwardProp: prop => !['contentAlignItems', 'contentGap'].includes(prop),
 })(({ theme, contentAlignItems, contentGap }) => ({
   padding: `${theme.spacing(3)} !important`,
   display: 'flex',
